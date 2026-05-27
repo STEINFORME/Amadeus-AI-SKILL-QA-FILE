@@ -1,0 +1,4 @@
+interface:
+  display_name: "md 同步 skill"
+  short_description: "从 markdown 知识源生成、更新、去项目化并复制通用 skill"
+  default_prompt: "Use $skill-sync-from-md to map reusable md source files to concise generic skills, exclude feature-specific docs, validate metadata, and record the sync."

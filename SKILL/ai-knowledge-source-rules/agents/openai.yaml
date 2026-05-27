@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI 知识源写入规则"
+  short_description: "区分完整知识源、简版入口、对话记录、skill 输出和归档"
+  default_prompt: "Use $ai-knowledge-source-rules to decide where durable rules, raw conversation records, generated skills, and archive evidence should be written."

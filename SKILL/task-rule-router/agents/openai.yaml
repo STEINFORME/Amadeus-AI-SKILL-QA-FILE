@@ -1,0 +1,4 @@
+interface:
+  display_name: "任务规则快速路由"
+  short_description: "按任务类型选择最小必要规则文件和 skill"
+  default_prompt: "Use $task-rule-router to select the relevant rule files and skills for this task before reading deeper context."

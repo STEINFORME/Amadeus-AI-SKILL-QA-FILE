@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI 组件参照地图"
+  short_description: "查找并复用仓库已有组件、颜色、控件、表格和布局样式"
+  default_prompt: "Use $ui-component-reference-map before UI work to find existing component/style references and reuse proven patterns."

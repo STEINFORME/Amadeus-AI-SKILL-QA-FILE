@@ -1,0 +1,4 @@
+interface:
+  display_name: "QA 资产清单"
+  short_description: "定位和登记截图、文本提取、视觉参考和迁移归档资产"
+  default_prompt: "Use $qa-assets-inventory to find or register visual/text evidence assets before using them for UI decisions."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "仓库功能地图审计"
+  short_description: "梳理大型或老旧仓库的模块、技术栈、重复能力和风险边界"
+  default_prompt: "Use $repo-function-map-audit to map repository modules, stacks, repeated capabilities, deploy artifacts, and safe refactor boundaries."

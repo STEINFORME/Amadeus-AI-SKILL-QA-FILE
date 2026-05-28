@@ -13,6 +13,7 @@ Identify these roles from the current repo or user-provided paths:
 - Simplified entry: lightweight index or automation trigger kept in a working repo.
 - Communications: raw conversation records, execution summaries, confirmations, and verification facts.
 - Skill output: generated or synchronized skill folders.
+- Active skill install: the local runtime directory where Codex discovers usable skills.
 - Archive: original backups and assets.
 
 ## Write Rules
@@ -23,6 +24,7 @@ Identify these roles from the current repo or user-provided paths:
 4. Keep simplified repo entries short and link them to the complete source.
 5. Do not write complete long-term rules back into a simplified entry.
 6. When path semantics change, update all routing docs that point at the old source.
+7. Distinguish repository skill output from active skill installation; copy or replace only valid skill folders that contain `SKILL.md`, then verify file sets and hashes when both locations must match.
 
 ## Checks
 

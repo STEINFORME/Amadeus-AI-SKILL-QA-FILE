@@ -23,8 +23,9 @@
 4. 读取当前已安装 skill 的 `SKILL.md` 和 references。
 5. 对比 md 规则与 skill 内容，只更新实际漂移的部分。
 6. 保持 skill 为流程执行器，保持 md 为知识库和判断规则。
-7. 更新后复制完整 skill 目录到 `D:\software\Amadeus-AI-SKILL-QA-FILE\SKILL`。
-8. 把本次自动化对话和执行摘要写入 `communications`。
+7. 若任务要求安装或替换当前 Codex skill，先确认磁盘空间和目标目录，再只处理包含 `SKILL.md` 的有效 skill 目录。
+8. 更新后复制完整 skill 目录到 `D:\software\Amadeus-AI-SKILL-QA-FILE\SKILL`，无效空目录不作为同步结果保留。
+9. 把本次自动化对话和执行摘要写入 `communications`，提交、推送或未执行项必须按真实结果记录。
 
 ## 同步边界
 
@@ -34,6 +35,7 @@
 - 不要因为一个规则变化就重写所有 skill 文件。
 - 不要删除、推送、提交或覆盖 skill，除非自动化任务明确包含并且已经得到确认。
 - 生成通用 skill 时必须去项目化：不写具体项目名、固定项目仓库路径、业务模块名或私有接口；只沉淀跨仓库可复用的流程、门禁、验证和风险控制。
+- 如果 `communications` 标明某次同步是中断前尝试，后续提炼和 skill 同步必须以最终记录为准，并清理由旧尝试产生的冗余条目。
 
 ## 源 md 到通用 skill 映射
 
@@ -80,5 +82,7 @@
 - 检查 skill 中是否包含新增规则。
 - 检查 skill 中是否没有重复维护完整 md 原文。
 - 检查 `D:\software\Amadeus-AI-SKILL-QA-FILE\SKILL` 中是否存在同步结果。
+- 检查每个同步结果都是包含 `SKILL.md` 的有效 skill 目录。
+- 如同步到当前 Codex skills 目录，比较源目录和目标目录的相对文件集合与内容哈希。
 - 检查 `communications` 是否记录本次同步。
 - 检查路径语义是否仍指向 Amadeus `md`。

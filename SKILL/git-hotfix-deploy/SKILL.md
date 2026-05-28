@@ -54,3 +54,9 @@ Use:
 - Report deletes separately unless the deploy system has a known delete mechanism.
 - Prefer Git-native extraction for exact branch content.
 - Compare important files with Git blob hashes, not text output that may change encoding or newlines.
+
+## Handoff Rules
+
+- State whether the source branch, hotfix branch, package output, commit, push, upload, and cleanup actually happened.
+- If release ownership stays outside Codex, word the reminder around the source branch that must be merged or cleaned up, not around assumptions about the hotfix branch lifecycle.
+- If a requested direct commit or push is explicitly authorized, still verify branch identity and remote target immediately before executing it.

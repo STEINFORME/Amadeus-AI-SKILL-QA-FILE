@@ -26,15 +26,18 @@ Low-grade evidence can guide exploration, not define business logic.
 1. Clarify the requested outcome and exact scope.
 2. Locate the real page/component entry and similar existing implementation.
 3. Map data flow: request params, response fields, mapper, display, form echo, submit payload, errors, permissions, pagination, and navigation.
-4. Choose the smallest necessary change; keep naming, file organization, API style, state management, error handling, and CSS style consistent with the repo.
-5. Implement normal, loading, empty, failure, permission, invalid-field, repeat-submit, reset/close, and refresh behavior when the touched surface requires it.
-6. Review the real diff for unrelated churn, global style leakage, dead code, hidden null risks, duplicate requests, and changed business meaning.
-7. Validate with the narrowest reliable test or runtime check.
+4. If an interface field changes, trace every consumer: source data, mapper, display, form echo, submit params, errors, and reused pages before editing.
+5. Choose the smallest necessary change; keep naming, file organization, API style, state management, error handling, and CSS style consistent with the repo.
+6. Implement normal, loading, empty, failure, permission, invalid-field, repeat-submit, reset/close, and refresh behavior when the touched surface requires it.
+7. Review the real diff for unrelated churn, global style leakage, dead code, hidden null risks, duplicate requests, and changed business meaning.
+8. Validate with the narrowest reliable test or runtime check.
 
 ## Legacy Rules
 
 - For JSP, jQuery, Avalon, CDN Vue, or nonstandard builds, preserve script order, global variables, server template paths, existing DOM/class structure, and request style.
 - Do not introduce modern build tooling, new dependencies, module systems, or broad component splitting unless the repo already uses them and the task requires it.
+- When the task is migration or page restoration, preserve the legacy page structure and interaction flow unless the user explicitly asks for a redesign.
+- If real APIs are not ready, use a narrow adapter/mock seam that preserves expected method names, params, response shells, and field shapes; do not scatter temporary data through the UI.
 - For third-party widgets, inspect the final browser DOM before styling hover, focus, upload, popover, or generated controls.
 
 ## Hard Stops

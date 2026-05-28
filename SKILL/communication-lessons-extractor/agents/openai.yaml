@@ -1,4 +1,4 @@
 interface:
   display_name: "对话教训提炼"
   short_description: "从原始会话记录提炼去重后的长期规则、风险提醒和自动化知识"
-  default_prompt: "Use $communication-lessons-extractor to update a capped lessons file from raw communication records without duplicating entries."
+  default_prompt: "Use $communication-lessons-extractor to update a capped lessons file from raw communication records, merge duplicate entries, and prefer final records over superseded attempts."

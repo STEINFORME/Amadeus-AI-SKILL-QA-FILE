@@ -1,6 +1,6 @@
 ---
 name: skill-sync-from-md
-description: 通用从 md 知识源同步 skill 的流程。Use when Codex needs to generate, update, compare, or copy skills from markdown knowledge files, map each reusable source document to a skill, exclude feature-specific skills, keep skills concise, update agents metadata, and record the sync result.
+description: 通用从 md 知识源同步 skill 的流程。Use when Codex needs to generate, update, compare, copy, or install skills from markdown knowledge files, map each reusable source document to a skill, exclude feature-specific skills, keep skills concise, update agents metadata, verify copied skill folders, and record the sync result.
 ---
 
 # Skill Sync From MD
@@ -20,8 +20,9 @@ description: 通用从 md 知识源同步 skill 的流程。Use when Codex needs
 3. Update only skills whose source rules changed or are missing.
 4. Keep frontmatter to `name` and `description`.
 5. Update `agents/openai.yaml` so display name, short description, and default prompt match the skill.
-6. Copy or write the complete skill folder to the configured skill output directory.
-7. Record the sync in communications.
+6. Copy or write only valid skill folders that contain `SKILL.md` to the configured skill output directory.
+7. If installing into an active Codex skills directory, check available space and replace only the selected valid skill folders.
+8. Record the sync in communications, including commit, push, install, or skipped operation status.
 
 ## Exclusion Rules
 
@@ -29,6 +30,8 @@ description: 通用从 md 知识源同步 skill 的流程。Use when Codex needs
 - Do not copy full md files into `SKILL.md`.
 - Do not make one giant skill when source docs describe separate reusable tasks.
 - Do not delete, overwrite, commit, push, or install skills unless the task explicitly includes that operation and required confirmation is satisfied.
+- Do not keep empty directories or folders without `SKILL.md` as synchronized skills.
+- When a raw communication marks an earlier sync as interrupted or superseded, use the later final record as the durable source.
 
 ## Validation
 
@@ -36,6 +39,8 @@ description: 通用从 md 知识源同步 skill 的流程。Use when Codex needs
 - Search for template placeholders.
 - Search for unwanted project names, fixed private paths, feature modules, and private API names in generic skills.
 - Count mapped source docs, generated skills, and excluded feature docs.
+- Check every synchronized folder contains `SKILL.md` and expected metadata.
+- Compare relative file lists and content hashes after copying or installing skill folders.
 
 ## Output
 

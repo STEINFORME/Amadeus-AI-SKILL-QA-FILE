@@ -12,6 +12,7 @@ description: 通用对话教训提炼 skill。Use when Codex needs to extract re
 3. Before adding a lesson, merge equivalent existing entries and delete or rewrite redundant ones.
 4. Keep the lessons file capped by the repository rule; if no rule exists, keep it short and high-signal.
 5. Each lesson must include source, type, content, and applicable trigger.
+6. If a communication says an earlier attempt was interrupted or superseded, prefer the final record and rewrite or remove lessons sourced only from the superseded attempt.
 
 ## Keep
 
@@ -28,6 +29,14 @@ description: 通用对话教训提炼 skill。Use when Codex needs to extract re
 - Emotional commentary.
 - Duplicated path statements already covered by a broader rule.
 - Feature-specific details that belong in a feature document, not a generic lesson.
+- Lessons whose only source is a superseded attempt when a later final communication contains the durable rule.
+- Verification claims that were not completed in the raw record.
+
+## Validation
+
+- Count formal lesson entries after editing and confirm the cap is not exceeded.
+- Search the edited lessons for duplicate source/path rules and stale superseded wording.
+- Keep raw communication paths as citations; do not replace them with memory-only provenance.
 
 ## Output
 

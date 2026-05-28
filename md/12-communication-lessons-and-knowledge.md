@@ -56,16 +56,16 @@
 - 内容：单靠 md 规则不能技术强制所有 AI 自动记录对话；若要强制，需要接入 AGENTS.md、skill、每日自动化或启动包装流程。
 - 适用：设计对话自动保存、自动化执行、skill 创建。
 
-### 20260527-006 从项目经验生成 skill 时要通用化
-
-- 来源：`communications\2026-05-27\164025-skill-generalization.md`
-- 类型：新规则
-- 内容：从具体项目 md 提炼 skill 时，只保留可跨仓库复用的流程、门禁、验证和风险控制，不把项目名、固定路径、业务模块或私有接口写进通用 skill。
-- 适用：根据 Amadeus `md` 更新开发 skill、验证 skill、热修 skill。
-
-### 20260527-007 源 md 原则上一条对应一个通用 skill
+### 20260527-006 源 md 生成 skill 要以最终记录为准并去项目化
 
 - 来源：`communications\2026-05-27\170345-skill-rebuild-source-md.md`
 - 类型：自动化规则
-- 内容：除单业务功能文档外，源头 md 原则上一条对应一个通用 skill；`AI 对话记录规则` 也必须生成对话写入文档 skill；像班主任手册、数字中枢这类单业务功能文档只保留为项目知识，不开发通用 skill。
-- 适用：从 `md` 生成或同步 `SKILL` 目录。
+- 内容：从 `communications` 提炼 skill 同步规则时，若存在中断尝试和最终重建记录，以最终记录为准；除单业务功能文档外，源头 md 原则上一条对应一个通用 skill，通用 skill 不写项目名、固定路径、业务模块或私有接口。
+- 适用：从 `md` 生成或同步 `SKILL` 目录、清理被旧尝试污染的 lessons 条目。
+
+### 20260527-007 skill 安装和复制后必须校验有效目录
+
+- 来源：`communications\2026-05-27\171010-install-skills-and-push.md`
+- 类型：自动化规则
+- 内容：安装或复制通用 skill 时，只处理包含 `SKILL.md` 的有效目录；遗留空目录或无效目录要清理或排除；源目录、安装目录和归档目录之间要校验文件集合和内容哈希一致，再记录提交、推送或未执行项的真实结果。
+- 适用：同步 skill 到 `C:\Users\zuoti\.codex\skills`、复制 skill 到 `D:\software\Amadeus-AI-SKILL-QA-FILE\SKILL`、提交或推送自动化结果。

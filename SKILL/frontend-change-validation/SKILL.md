@@ -34,10 +34,14 @@ Do not use `通过` when critical runtime behavior is still unverified.
 - Run targeted tests first, then type check, build, lint, syntax checks, or browser checks as available.
 - For forms, verify required rules, echo/backfill, reset, close cleanup, repeat submit, submit failure, and success refresh.
 - For lists, verify empty state, total/list mismatch, pagination after delete, filters during request, and stale response overwrite.
+- For interface changes, verify the full chain from response mapping to display, edit echo, submit payload, error handling, and every reused view touched by that field.
+- For reference-style fixes, compare against the actual reference component or screenshot state used, not only against source selectors.
 
 ## Limited Verification
 
 Mark limited instead of pretending when validation requires real deletion, save, submit, upload, publish, audit, production API calls, real user data, or irreversible actions without explicit confirmation.
+
+If browser or runtime verification is blocked, do static checks that still reduce risk, but label the result `受限完成` or `未验证` instead of `通过`.
 
 ## Report
 

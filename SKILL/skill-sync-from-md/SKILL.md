@@ -23,6 +23,7 @@ description: 通用从 md 知识源同步 skill 的流程。Use when Codex needs
 6. Copy or write only valid skill folders that contain `SKILL.md` to the configured skill output directory.
 7. If installing into an active Codex skills directory, check available space and replace only the selected valid skill folders.
 8. Record the sync in communications, including commit, push, install, or skipped operation status.
+9. If commit or push is explicitly authorized in the task, verify branch, remote target, and worktree status immediately before executing it.
 
 ## Exclusion Rules
 
@@ -30,6 +31,7 @@ description: 通用从 md 知识源同步 skill 的流程。Use when Codex needs
 - Do not copy full md files into `SKILL.md`.
 - Do not make one giant skill when source docs describe separate reusable tasks.
 - Do not delete, overwrite, commit, push, or install skills unless the task explicitly includes that operation and required confirmation is satisfied.
+- When commit or push is explicitly authorized, do not ask again; verify identity first and record the exact result.
 - Do not keep empty directories or folders without `SKILL.md` as synchronized skills.
 - When a raw communication marks an earlier sync as interrupted or superseded, use the later final record as the durable source.
 
@@ -44,4 +46,4 @@ description: 通用从 md 知识源同步 skill 的流程。Use when Codex needs
 
 ## Output
 
-Report source-to-skill mapping, excluded docs and reasons, changed skill files, validation, and unverified items.
+Report source-to-skill mapping, excluded docs and reasons, changed skill files, validation, commit or push status, and unverified items.

@@ -25,6 +25,8 @@ description: 通用 Git 热修分支和部署包流程。Use when Codex needs to
 
 Require explicit confirmation before clearing package directories, `git commit`, `git push`, remote delete, force push, `git reset --hard`, forced checkout, forced clean, forced overwrite, production upload, or real deployment.
 
+If the current task already explicitly authorizes commit or push, that satisfies confirmation for that operation; still verify branch identity, remote target, and worktree status before executing it.
+
 Use:
 
 ```text
@@ -44,7 +46,7 @@ Use:
 4. Rebuild package output only after confirmation when clearing or overwriting is involved.
 5. Create the hotfix branch from the verified base unless repo docs say otherwise.
 6. Merge or cherry-pick only approved source changes.
-7. Push only after explicit confirmation.
+7. Push only after explicit confirmation or explicit task authorization.
 8. Hand off with exact source branch, hotfix branch, push status, release action, cleanup target, and unperformed remote/destructive actions.
 
 ## Package Rules

@@ -27,6 +27,7 @@ Skip simple Q&A, temporary explanations, and no-decision chatter.
 4. If a conversation creates reusable knowledge, write the raw record first, then update the lessons or topic md.
 5. If an earlier record says a result will be confirmed later, add a follow-up record or update the run summary after the operation actually completes.
 6. For automation runs, include the current run time, changed paths, validation result, and whether commit, push, install, or destructive operations were actually performed or skipped.
+7. For authorized commit or push runs, record the checked branch, remote target, commit hash, push result, and skipped items.
 
 ## Record Template
 

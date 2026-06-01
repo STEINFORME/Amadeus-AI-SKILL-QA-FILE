@@ -67,6 +67,7 @@
 | --- | --- |
 | `07-digitalhub-structure-notes.md` | 单业务功能链路，只作为项目知识保留 |
 | `08-class-teacher-handbook-interfaces.md` | 单业务接口契约，只作为项目知识保留 |
+| `13-lqtedu-page-navigation-map.md` | 项目页面入口地图，只抽象入口链路、权限上下文和触发页判断到通用 skill |
 
 ## 输出要求
 

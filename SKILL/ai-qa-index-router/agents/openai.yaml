@@ -1,4 +1,4 @@
 interface:
   display_name: "AI 知识库索引路由"
-  short_description: "按任务类型读取本地 QA、md、记录和 skill 输出源"
-  default_prompt: "Use $ai-qa-index-router to choose the right local knowledge files before working, then verify key facts against real source or runtime evidence."
+  short_description: "按任务类型读取 QA、md、页面入口和 skill 输出源"
+  default_prompt: "Use $ai-qa-index-router to choose the right local knowledge files, including page navigation maps when relevant, then verify key facts against real source or runtime evidence."

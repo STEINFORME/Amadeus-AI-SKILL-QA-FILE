@@ -8,7 +8,7 @@ description: 通用仓库功能地图和技术栈审计 skill。Use when Codex n
 ## Audit Flow
 
 1. Locate build entry, runtime framework, frontend stacks, backend routing, ORM/schema clues, static assets, deploy/package directories, and generated artifacts.
-2. Build a module map: business domain, frontend entry, backend/service clues, shared capabilities, and risk.
+2. Build a module map: business domain, frontend entry, navigation/permission context, backend/service clues, shared capabilities, and risk.
 3. Separate source, deploy output, generated assets, temporary tools, and historical fixes.
 4. Identify repeated capabilities before merging pages: upload, notification, selector, export, permissions, status enum, reports, queues, attachments, and routing.
 5. Use the map for routing and risk, not as final proof for a specific code change.
@@ -19,6 +19,7 @@ description: 通用仓库功能地图和技术栈审计 skill。Use when Codex n
 - Prefer consolidating shared services, state, permissions, attachments, exports, and notifications before merging UI pages.
 - Treat deploy/package directories as outputs unless repo evidence says they are active source.
 - Mark feature-specific modules as project knowledge; do not create generic feature skills from them.
+- Keep large project page-navigation maps as project evidence; only extract reusable entry-chain audit rules into generic workflows.
 
 ## Output
 

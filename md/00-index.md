@@ -27,6 +27,7 @@
 | 改完验收、写测试结论 | `04-rp-page-testing-rules.md` | 按入口、参数、显隐、交互、视觉输出结论 |
 | 找 base / ebase 组件和样式 | `05-base-ebase-component-map.md` | 快速定位旧 JSP/Avalon 和 Vue3/Element Plus 参考 |
 | 理解整体项目模块 | `06-project-function-map.md` | 判断业务域、技术栈、复用边界和风险 |
+| 查页面入口、点击链路、直链/部门上下文要求 | `13-lqtedu-page-navigation-map.md` | 给 AI 判断每个 JSP/HTML 页面怎么到达、是否要先切部门、是否只能从列表或流程进入 |
 | 数字中枢 | `07-digitalhub-structure-notes.md` | 查管理入口、静态大屏、接口链路和常见坑 |
 | 班主任手册接口 | `08-class-teacher-handbook-interfaces.md` | 对齐 mock、真实 `/wbSheet/*` 接口和动态字段 mapper |
 | 热修、deploy、Git 发布流程 | `09-hotfix-deploy-rules.md` | 控制热修分支、部署包和危险操作确认 |

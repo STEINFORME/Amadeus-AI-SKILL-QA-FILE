@@ -1,4 +1,4 @@
 interface:
   display_name: "通用前端开发工作流"
-  short_description: "仓库事实驱动的前端页面、模块和接口字段开发流程"
-  default_prompt: "Use $repo-frontend-dev-workflow for this frontend task: read repo guidance and source first, confirm entry/data/branch scope/impact, implement the smallest safe change, validate states and interactions, and report result and risk."
+  short_description: "仓库事实驱动的前端页面、入口链路和接口字段流程"
+  default_prompt: "Use $repo-frontend-dev-workflow for this frontend task: read repo guidance and source first, confirm entry/navigation/data/branch scope/impact, implement the smallest safe change, validate states and interactions, and report result and risk."

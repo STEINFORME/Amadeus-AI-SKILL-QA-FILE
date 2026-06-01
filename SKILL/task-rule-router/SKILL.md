@@ -1,6 +1,6 @@
 ---
 name: task-rule-router
-description: 通用任务规则快速路由 skill。Use when Codex needs to quickly choose which rule document or skill to read for a development, UI, validation, component/style, function-map, hotfix, asset, communication, or skill-sync task without loading the entire knowledge base.
+description: 通用任务规则快速路由 skill。Use when Codex needs to quickly choose which rule document or skill to read for a development, UI, page entry/navigation, validation, component/style, function-map, hotfix, asset, communication, or skill-sync task without loading the entire knowledge base.
 ---
 
 # Task Rule Router
@@ -17,6 +17,7 @@ description: 通用任务规则快速路由 skill。Use when Codex needs to quic
 ## Common Routes
 
 - Page or UI development: frontend development workflow.
+- Page entry, click path, deep link, or context requirement: page navigation or route map.
 - Post-change acceptance: frontend validation workflow.
 - Component, color, style, or reference page lookup: component reference map.
 - Repo architecture or module ownership: function-map audit.

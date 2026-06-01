@@ -7,7 +7,7 @@ description: 通用前端变更验证和结论门禁。Use when Codex has modifi
 
 ## Validation Order
 
-1. Entry: correct route, menu, include, parent page, caller, or local URL.
+1. Entry: correct route, menu, click path, deep-link requirement, include, parent page, caller, workflow step, permission context, or local URL.
 2. Parameters: URL, route/query params, props, hidden inputs, storage, and API payload.
 3. Data states: normal, empty, loading, failure, permission denied, missing fields, wrong field types.
 4. Visibility: permission, status, disabled/readonly/edit mode, row actions, operation placeholders.
@@ -36,7 +36,8 @@ Do not use `通过` when critical runtime behavior is still unverified.
 - For lists, verify empty state, total/list mismatch, pagination after delete, filters during request, and stale response overwrite.
 - For interface changes, verify the full chain from response mapping to display, edit echo, submit payload, error handling, and every reused view touched by that field.
 - For reference-style fixes, compare against the actual reference component or screenshot state used, not only against source selectors.
-- Use the repository's configured browser/E2E route when available; production-like targets, real submits, deletes, uploads, publishes, or formal environments still require explicit confirmation.
+- For legacy or server-rendered pages, verify through the real menu, list, parent page, or workflow trigger when direct URLs depend on session or permissions.
+- Use the repository's configured browser/E2E route and page navigation map when available; production-like targets, real submits, deletes, uploads, publishes, or formal environments still require explicit confirmation.
 
 ## Limited Verification
 

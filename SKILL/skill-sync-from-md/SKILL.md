@@ -36,6 +36,7 @@ description: 通用从 md 知识源同步 skill 的流程。Use when Codex needs
 - Do not keep empty directories or folders without `SKILL.md` as synchronized skills.
 - When a raw communication marks an earlier sync as interrupted or superseded, use the later final record as the durable source.
 - If source md and existing skills already match, do not churn every skill; update only changed lessons, metadata, or records and report unchanged mappings.
+- Keep project page-navigation maps as topic documents; extract only reusable entry-chain, permission-context, and caller-trigger rules into generic skills.
 
 ## Validation
 

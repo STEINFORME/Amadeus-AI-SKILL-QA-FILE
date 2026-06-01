@@ -39,7 +39,7 @@
 
 - 来源：`communications\2026-05-27\161500-qa-migration.md`、`communications\2026-05-27\170345-skill-rebuild-source-md.md`、`communications\2026-06-01\130320-navigation-map-skill-sync.md`
 - 类型：自动化规则
-- 内容：自动化可以从原仓库 `qa` 简版入口触发，但生成或更新 skill 时必须读取 Amadeus `md` 作为完整知识源；除单业务功能或项目地图文档外，源 md 原则上一条对应一个通用 skill；项目页面地图只抽象入口链路、权限上下文和触发页判断；若存在中断尝试，以最终记录为准；通用 skill 不写项目名、固定路径、业务模块或私有接口。
+- 内容：生成或更新 skill 必须以 Amadeus `md` 为完整知识源；单业务文档和项目页面地图不生成项目专用 skill，只抽象可迁移的入口链路、权限上下文和触发页判断；中断尝试让位于最终记录；通用 skill 不写项目名、固定路径、业务模块或私有接口。
 - 适用：每日固定时间更新 skill、复制 skill 到 `D:\software\Amadeus-AI-SKILL-QA-FILE\SKILL`、清理被旧尝试污染的 lessons 条目。
 
 ### 20260527-004 清空目录前必须先备份并确认

@@ -24,6 +24,7 @@ description: 通用从 md 知识源同步 skill 的流程。Use when Codex needs
 7. If installing into an active Codex skills directory, check available space and replace only the selected valid skill folders.
 8. Record the sync in communications, including commit, push, install, or skipped operation status.
 9. If commit or push is explicitly authorized in the task, verify branch, remote target, and worktree status immediately before executing it.
+10. Treat commit and push as separate operations; do not infer push authorization from commit authorization unless the task explicitly includes both.
 
 ## Exclusion Rules
 
@@ -34,6 +35,7 @@ description: 通用从 md 知识源同步 skill 的流程。Use when Codex needs
 - When commit or push is explicitly authorized, do not ask again; verify identity first and record the exact result.
 - Do not keep empty directories or folders without `SKILL.md` as synchronized skills.
 - When a raw communication marks an earlier sync as interrupted or superseded, use the later final record as the durable source.
+- If source md and existing skills already match, do not churn every skill; update only changed lessons, metadata, or records and report unchanged mappings.
 
 ## Validation
 

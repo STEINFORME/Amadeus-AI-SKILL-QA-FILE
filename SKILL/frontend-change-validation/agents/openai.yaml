@@ -1,4 +1,4 @@
 interface:
   display_name: "前端变更验证"
   short_description: "前端修改后按入口、参数、字段链路、交互和视觉分层验证"
-  default_prompt: "Use $frontend-change-validation after frontend changes: verify entry, parameters, field mappings, states, interactions, visual details, edge cases, and clearly label limited or unverified runtime coverage."
+  default_prompt: "Use $frontend-change-validation after frontend changes: verify entry, parameters, field mappings, states, interactions, visual details, edge cases, safe runtime route, and clearly label limited or unverified coverage."

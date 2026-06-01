@@ -1,4 +1,4 @@
 interface:
   display_name: "前端样式修复规则"
   short_description: "按参考页复用样式、间距、颜色、圆角、展示格式和 mock 适配层"
-  default_prompt: "Use $frontend-style-fix-rules for deterministic UI style fixes or reference-page matching without changing business behavior."
+  default_prompt: "Use $frontend-style-fix-rules for deterministic UI style fixes or reference-page matching: preserve business behavior, use existing tokens/classes and measured reference rules, isolate mock adapters, and validate visual output."

@@ -1,4 +1,4 @@
 interface:
   display_name: "Git 热修部署"
   short_description: "通用 Git 热修分支、部署包重建和远端操作确认流程"
-  default_prompt: "Use $git-hotfix-deploy for a Git hotfix/deploy-package flow: verify branch and remote state, require confirmation for destructive or remote operations, rebuild deploy package from the approved diff, validate file hashes, and state exact handoff status."
+  default_prompt: "Use $git-hotfix-deploy for a Git hotfix/deploy-package flow: verify branch and remote state, keep commit/push authorization separate, require confirmation for destructive or remote operations, rebuild deploy package from the approved diff, validate file hashes, and state exact handoff status."

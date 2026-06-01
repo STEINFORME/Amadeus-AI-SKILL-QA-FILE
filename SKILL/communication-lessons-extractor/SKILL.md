@@ -13,6 +13,7 @@ description: 通用对话教训提炼 skill。Use when Codex needs to extract re
 4. Keep the lessons file capped by the repository rule; if no rule exists, keep it short and high-signal.
 5. Each lesson must include source, type, content, and applicable trigger.
 6. If a communication says an earlier attempt was interrupted or superseded, prefer the final record and rewrite or remove lessons sourced only from the superseded attempt.
+7. If there are no new durable facts, consolidate stale or duplicate entries and report that no lesson was added; do not invent a synthetic lesson.
 
 ## Keep
 
@@ -40,4 +41,4 @@ description: 通用对话教训提炼 skill。Use when Codex needs to extract re
 
 ## Output
 
-Report added, merged, deleted, and unchanged lesson entries, plus the final entry count.
+Report added, merged, deleted, unchanged, and intentionally skipped lesson entries, plus the final entry count.

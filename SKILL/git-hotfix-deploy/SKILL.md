@@ -27,6 +27,8 @@ Require explicit confirmation before clearing package directories, `git commit`,
 
 If the current task already explicitly authorizes commit or push, that satisfies confirmation for that operation; still verify branch identity, remote target, and worktree status before executing it.
 
+Commit and push are separate: explicit commit authorization does not imply push, and explicit push authorization does not remove the branch/remote/worktree verification gate.
+
 Use:
 
 ```text
@@ -48,6 +50,7 @@ Use:
 6. Merge or cherry-pick only approved source changes.
 7. Push only after explicit confirmation or explicit task authorization.
 8. Hand off with exact source branch, hotfix branch, push status, release action, cleanup target, and unperformed remote/destructive actions.
+9. When a push is skipped because it was not requested, state that as an intentional skipped operation, not as an omission.
 
 ## Package Rules
 

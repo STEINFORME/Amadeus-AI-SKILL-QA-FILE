@@ -23,6 +23,7 @@ Use this skill only for deterministic visual or display-layer work. If the chang
 - Keep display format and submit/API format separate.
 - Avoid global CSS unless the target is intentionally global and verified.
 - Inspect final DOM for generated widgets before writing selectors.
+- Use spacing, radius, color, and component choices from the actual reference or repo docs; if references conflict, stop and report the conflict instead of inventing a new local style.
 
 ## Mock Adapter Rules
 

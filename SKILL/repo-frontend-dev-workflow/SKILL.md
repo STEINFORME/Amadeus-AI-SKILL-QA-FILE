@@ -11,6 +11,7 @@ description: 通用前端页面和模块开发工作流。Use when Codex needs t
 2. Use `rg` to locate entries, fields, components, APIs, styles, and call chains.
 3. Treat project docs as direction; confirm final facts from current source, real runtime behavior, and real API payloads.
 4. Do not edit before identifying entry, data source, state owner, existing component/style patterns, impact scope, and validation route.
+5. For frontend-only work, follow the repository's branch and ownership convention; do not create backend scope or branches unless the task explicitly requires it.
 
 ## Evidence Order
 
@@ -39,6 +40,7 @@ Low-grade evidence can guide exploration, not define business logic.
 - When the task is migration or page restoration, preserve the legacy page structure and interaction flow unless the user explicitly asks for a redesign.
 - If real APIs are not ready, use a narrow adapter/mock seam that preserves expected method names, params, response shells, and field shapes; do not scatter temporary data through the UI.
 - For third-party widgets, inspect the final browser DOM before styling hover, focus, upload, popover, or generated controls.
+- When design/RP evidence covers only the normal state, explicitly account for empty, loading, failure, disabled, permission, and dialog reset states before calling the implementation complete.
 
 ## Hard Stops
 

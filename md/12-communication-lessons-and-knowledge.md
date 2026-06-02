@@ -37,9 +37,9 @@
 
 ### 20260527-003 skill 同步必须读完整 md 并去项目化
 
-- 来源：`communications\2026-05-27\161500-qa-migration.md`、`communications\2026-05-27\170345-skill-rebuild-source-md.md`、`communications\2026-06-01\130320-navigation-map-skill-sync.md`
+- 来源：`communications\2026-05-27\161500-qa-migration.md`、`communications\2026-05-27\170345-skill-rebuild-source-md.md`、`communications\2026-06-01\130320-navigation-map-skill-sync.md`、`communications\2026-06-01\163600-skill-sync-no-drift.md`
 - 类型：自动化规则
-- 内容：生成或更新 skill 必须以 Amadeus `md` 为完整知识源；单业务文档和项目页面地图不生成项目专用 skill，只抽象可迁移的入口链路、权限上下文和触发页判断；中断尝试让位于最终记录；通用 skill 不写项目名、固定路径、业务模块或私有接口。
+- 内容：生成或更新 skill 必须以 Amadeus `md` 为完整知识源；单业务文档和项目页面地图不生成项目专用 skill，只抽象可迁移规则；中断尝试让位于最终记录；无漂移时只记录验证，不重复改 skill；通用 skill 不写项目名、固定路径、业务模块或私有接口。
 - 适用：每日固定时间更新 skill、复制 skill 到 `D:\software\Amadeus-AI-SKILL-QA-FILE\SKILL`、清理被旧尝试污染的 lessons 条目。
 
 ### 20260527-004 清空目录前必须先备份并确认
@@ -58,9 +58,9 @@
 
 ### 20260527-006 skill 安装和复制后必须校验有效目录
 
-- 来源：`communications\2026-05-27\171010-install-skills-and-push.md`
+- 来源：`communications\2026-05-27\171010-install-skills-and-push.md`、`communications\2026-06-01\163600-skill-sync-no-drift.md`
 - 类型：自动化规则
-- 内容：安装或复制通用 skill 时，只处理包含 `SKILL.md` 的有效目录；遗留空目录或无效目录要清理或排除；源目录、安装目录和归档目录之间要校验文件集合和内容哈希一致，再记录提交、推送或未执行项的真实结果。
+- 内容：安装或复制通用 skill 时，只处理包含 `SKILL.md` 的有效目录；先校验源目录、安装目录和归档目录的相对文件集合与 SHA256；一致时不重复复制或改文件，漂移时再同步并记录提交、推送或未执行项的真实结果。
 - 适用：同步 skill 到 `C:\Users\zuoti\.codex\skills`、复制 skill 到 `D:\software\Amadeus-AI-SKILL-QA-FILE\SKILL`、提交或推送自动化结果。
 
 ### 20260528-007 提交推送按明确授权边界执行

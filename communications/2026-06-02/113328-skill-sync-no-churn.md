@@ -17,6 +17,7 @@
 ## 处理内容
 
 - 优化 `md\12-communication-lessons-and-knowledge.md` 第 003、006 条，补充“无漂移只记录验证、不重复改 skill”和“哈希一致时不重复复制或改文件”。
+- 清理重复生成的 `communications\2026-06-02\113311-skill-sync-no-new-drift.md`，只保留本记录。
 - 未新增 lessons 正式条目，正式条目数保持 7 条。
 - 未修改通用 skill 或热修 skill；仓库 `SKILL` 已是最新归档状态。
 

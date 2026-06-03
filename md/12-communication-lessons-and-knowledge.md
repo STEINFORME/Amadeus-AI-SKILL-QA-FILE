@@ -39,7 +39,7 @@
 
 - 来源：`communications\2026-05-27\161500-qa-migration.md`、`communications\2026-05-27\170345-skill-rebuild-source-md.md`、`communications\2026-06-01\130320-navigation-map-skill-sync.md`、`communications\2026-06-01\163600-skill-sync-no-drift.md`
 - 类型：自动化规则
-- 内容：生成或更新 skill 必须以 Amadeus `md` 为完整知识源；单业务文档和项目页面地图不生成项目专用 skill，只抽象可迁移规则；中断尝试让位于最终记录；无漂移时只记录验证，不重复改 skill；通用 skill 不写项目名、固定路径、业务模块或私有接口。
+- 内容：生成或更新 skill 必须以 Amadeus `md` 为完整知识源；单业务文档和项目页面地图不生成项目专用 skill，只抽象可迁移规则；中断尝试让位于最终记录；通用 skill 不写项目名、固定路径、业务模块或私有接口。
 - 适用：每日固定时间更新 skill、复制 skill 到 `D:\software\Amadeus-AI-SKILL-QA-FILE\SKILL`、清理被旧尝试污染的 lessons 条目。
 
 ### 20260527-004 清空目录前必须先备份并确认
@@ -56,16 +56,16 @@
 - 内容：单靠 md 规则不能技术强制所有 AI 自动记录对话；若要强制，需要接入 AGENTS.md、skill、每日自动化或启动包装流程。
 - 适用：设计对话自动保存、自动化执行、skill 创建。
 
-### 20260527-006 skill 安装和复制后必须校验有效目录
+### 20260527-006 skill 安装、复制和无漂移判断
 
-- 来源：`communications\2026-05-27\171010-install-skills-and-push.md`、`communications\2026-06-01\163600-skill-sync-no-drift.md`
+- 来源：`communications\2026-05-27\171010-install-skills-and-push.md`、`communications\2026-06-01\163600-skill-sync-no-drift.md`、`communications\2026-06-02\113328-skill-sync-no-churn.md`
 - 类型：自动化规则
-- 内容：安装或复制通用 skill 时，只处理包含 `SKILL.md` 的有效目录；先校验源目录、安装目录和归档目录的相对文件集合与 SHA256；一致时不重复复制或改文件，漂移时再同步并记录提交、推送或未执行项的真实结果。
+- 内容：安装、复制或比对通用 skill 时，只处理包含 `SKILL.md` 的有效目录；先校验源目录、安装目录和归档目录的相对文件集合与 SHA256；一致时只记录验证结论，不重复复制、重写 skill 或制造提交，漂移时再同步并记录提交、推送或未执行项的真实结果。
 - 适用：同步 skill 到 `C:\Users\zuoti\.codex\skills`、复制 skill 到 `D:\software\Amadeus-AI-SKILL-QA-FILE\SKILL`、提交或推送自动化结果。
 
 ### 20260528-007 提交推送按明确授权边界执行
 
-- 来源：`communications\2026-05-28\130900-skill-sync-lessons-update.md`、`communications\2026-05-28\163320-skill-sync-push.md`
+- 来源：`communications\2026-05-28\130900-skill-sync-lessons-update.md`、`communications\2026-05-28\163320-skill-sync-push.md`、`communications\2026-06-02\113328-skill-sync-no-churn.md`
 - 类型：自动化规则
-- 内容：提交和推送分开处理；未明确要求推送时不推送，自动化任务明确授权提交或推送时可直接执行；执行前仍要核对当前分支、远端目标和工作区状态，执行后记录提交哈希、推送结果和未执行项。
+- 内容：提交和推送分开处理；未明确要求推送时不推送，自动化任务明确授权提交或推送时可直接执行；执行前仍要核对当前分支、远端目标和工作区状态；无真实差异时不为满足授权制造改动，执行后记录提交哈希、推送结果和未执行项。
 - 适用：自动化同步 skill、直接提交到 main、推送远端。

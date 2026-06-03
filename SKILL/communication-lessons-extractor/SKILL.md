@@ -32,6 +32,7 @@ description: 通用对话教训提炼 skill。Use when Codex needs to extract re
 - Feature-specific details that belong in a feature document, not a generic lesson.
 - Lessons whose only source is a superseded attempt when a later final communication contains the durable rule.
 - Verification claims that were not completed in the raw record.
+- No-drift run records whose reusable rule is already captured, unless they change the rule or source boundary.
 
 ## Validation
 

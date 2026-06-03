@@ -29,6 +29,8 @@ If the current task already explicitly authorizes commit or push, that satisfies
 
 Commit and push are separate: explicit commit authorization does not imply push, and explicit push authorization does not remove the branch/remote/worktree verification gate.
 
+Explicit authorization does not require creating filler changes. If verification shows no real diff, report the no-op result instead of committing.
+
 Use:
 
 ```text

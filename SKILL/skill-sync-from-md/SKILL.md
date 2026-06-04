@@ -25,6 +25,7 @@ description: 通用从 md 知识源同步 skill 的流程。Use when Codex needs
 8. Record the sync in communications, including commit, push, install, or skipped operation status.
 9. If commit or push is explicitly authorized in the task, verify branch, remote target, and worktree status immediately before executing it.
 10. Treat commit and push as separate operations; do not infer push authorization from commit authorization unless the task explicitly includes both.
+11. When raw communications only reconfirm existing no-drift or no-churn behavior, update at most lesson provenance or the run record; do not rewrite unchanged skills.
 
 ## Exclusion Rules
 
@@ -36,7 +37,7 @@ description: 通用从 md 知识源同步 skill 的流程。Use when Codex needs
 - Do not keep empty directories or folders without `SKILL.md` as synchronized skills.
 - When a raw communication marks an earlier sync as interrupted or superseded, use the later final record as the durable source.
 - If source md and existing skills already match, do not churn every skill; update only changed lessons, metadata, or records and report unchanged mappings.
-- If file-list and SHA256 checks prove no drift, record the validation result instead of rewriting skills or manufacturing a commit.
+- If file-list and SHA256 checks prove no drift, record the validation result instead of rewriting skills, recopying folders, or manufacturing a commit.
 - Keep project page-navigation maps as topic documents; extract only reusable entry-chain, permission-context, and caller-trigger rules into generic skills.
 
 ## Validation
@@ -50,4 +51,4 @@ description: 通用从 md 知识源同步 skill 的流程。Use when Codex needs
 
 ## Output
 
-Report source-to-skill mapping, excluded docs and reasons, changed skill files, validation, commit or push status, and unverified items.
+Report source-to-skill mapping, excluded docs and reasons, changed skill files, no-drift skips, validation, commit or push status, and unverified items.

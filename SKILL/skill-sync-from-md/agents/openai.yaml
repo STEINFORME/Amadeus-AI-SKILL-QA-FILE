@@ -1,4 +1,4 @@
 interface:
   display_name: "md 同步 skill"
   short_description: "从 markdown 知识源生成、更新、去项目化、复制并校验通用 skill"
-  default_prompt: "Use $skill-sync-from-md to map reusable md source files to concise generic skills, exclude feature-specific docs, copy or install only valid skill folders, verify file sets and hashes, treat commit and push separately, validate metadata, and record the sync."
+  default_prompt: "Use $skill-sync-from-md to map reusable md source files to concise generic skills, exclude feature-specific docs, copy or install only valid skill folders, verify file sets and hashes, skip unchanged no-drift skills, treat commit and push separately, validate metadata, and record the sync."

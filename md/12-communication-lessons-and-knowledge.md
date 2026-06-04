@@ -58,9 +58,9 @@
 
 ### 20260527-006 skill 安装、复制和无漂移判断
 
-- 来源：`communications\2026-05-27\171010-install-skills-and-push.md`、`communications\2026-06-01\163600-skill-sync-no-drift.md`、`communications\2026-06-02\113328-skill-sync-no-churn.md`
+- 来源：`communications\2026-05-27\171010-install-skills-and-push.md`、`communications\2026-06-01\163600-skill-sync-no-drift.md`、`communications\2026-06-02\113328-skill-sync-no-churn.md`、`communications\2026-06-03\163505-skill-sync-no-new-drift.md`
 - 类型：自动化规则
-- 内容：安装、复制或比对通用 skill 时，只处理包含 `SKILL.md` 的有效目录；先校验源目录、安装目录和归档目录的相对文件集合与 SHA256；一致时只记录验证结论，不重复复制、重写 skill 或制造提交，漂移时再同步并记录提交、推送或未执行项的真实结果。
+- 内容：安装、复制或比对通用 skill 时，只处理包含 `SKILL.md` 的有效目录；先校验源目录、安装目录和归档目录的相对文件集合与 SHA256；一致且 communications 只重复确认 no-drift 时，只合并来源或记录验证结论，不重复复制、重写 skill 或制造提交；漂移时再同步并记录提交、推送或未执行项的真实结果。
 - 适用：同步 skill 到 `C:\Users\zuoti\.codex\skills`、复制 skill 到 `D:\software\Amadeus-AI-SKILL-QA-FILE\SKILL`、提交或推送自动化结果。
 
 ### 20260528-007 提交推送按明确授权边界执行

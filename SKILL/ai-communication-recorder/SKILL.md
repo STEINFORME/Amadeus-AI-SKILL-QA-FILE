@@ -28,6 +28,8 @@ Skip simple Q&A, temporary explanations, and no-decision chatter.
 5. If an earlier record says a result will be confirmed later, add a follow-up record or update the run summary after the operation actually completes.
 6. For automation runs, include the current run time, changed paths, validation result, and whether commit, push, install, or destructive operations were actually performed or skipped.
 7. For authorized commit or push runs, record the checked branch, remote target, commit hash, push result, and skipped items.
+8. Do not record secrets, credentials, cookies, tokens, full session logs, or large runtime logs; summarize only the relevant facts.
+9. If the run only reconfirms no-drift, record the verification facts but do not create new durable lesson entries.
 
 ## Record Template
 
@@ -66,4 +68,4 @@ YYYY-MM-DD HH:mm:ss
 
 ## Output
 
-Report the record path, operation statuses recorded, and any follow-up lesson/topic files that were updated.
+Report the record path, operation statuses recorded, lesson/topic updates performed or intentionally skipped, and any sensitive/runtime material excluded.

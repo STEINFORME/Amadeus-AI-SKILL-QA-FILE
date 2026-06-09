@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI 工作流迁移恢复"
+  short_description: "迁移长期资产、恢复运行层、检查同步边界和健康状态"
+  default_prompt: "Use $ai-workflow-migration-restore to plan or verify AI workflow migration, runtime restoration, skill sync, health checks, and secret-safe local setup."

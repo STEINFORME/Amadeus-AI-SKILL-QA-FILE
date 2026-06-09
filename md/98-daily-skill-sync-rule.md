@@ -45,8 +45,11 @@
 
 | 源 md | 通用 skill | 说明 |
 | --- | --- | --- |
-| `00-index.md` | `ai-qa-index-router` | 知识库索引和任务路由 |
-| `01-path-and-source-rules.md` | `ai-knowledge-source-rules` | 知识源、路径语义和写入边界 |
+| `00-index.md`、`00-agent-entry-index.md` | `ai-qa-index-router` | 知识库索引、启动入口和任务路由 |
+| `00-ai-workflow-runbook.md` | `task-rule-router` | AI 工作流步骤和任务确认节点 |
+| `00-folder-purpose-map.md`、`00-knowledge-source-policy.md`、`01-path-and-source-rules.md` | `ai-knowledge-source-rules` | 知识源、路径语义、目录职责和写入边界 |
+| `00-migration-and-restore-guide.md` | `ai-workflow-migration-restore` | AI 工作流迁移、恢复和健康检查 |
+| `00-runtime-sync-policy.md` | `skill-sync-from-md` | runtime skill 同步方向、漂移检测和安装边界 |
 | `02-rp-page-development-rules.md` | `repo-frontend-dev-workflow` | 前端页面和模块开发工作流 |
 | `03-rp-page-common-router.md` | `task-rule-router` | 任务规则快速路由 |
 | `04-rp-page-testing-rules.md` | `frontend-change-validation` | 前端变更验证和结论门禁 |

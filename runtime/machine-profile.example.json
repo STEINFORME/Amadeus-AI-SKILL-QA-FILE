@@ -1,0 +1,13 @@
+﻿{
+  "assetRoot": "D:\\software",
+  "amadeusRoot": "D:\\software\\Amadeus-AI-SKILL-QA-FILE",
+  "aiWorkspaceRoot": "D:\\software\\AI-Workspace",
+  "obsidianVault": "D:\\software\\AI-Workspace\\lqtedu-web-ai",
+  "companyRepo": "D:\\software\\AI-Workspace\\lqtedu-web-ai\\repo",
+  "codexRuntimeSkills": "C:\\Users\\<USER>\\.codex\\skills",
+  "codexSessions": "C:\\Users\\<USER>\\.codex\\sessions",
+  "codexLog": "C:\\Users\\<USER>\\.codex\\log",
+  "hermesUserConfig": "C:\\Users\\<USER>\\.hermes",
+  "hermesLocalData": "C:\\Users\\<USER>\\AppData\\Local\\hermes",
+  "obsidianVaultEnv": "OBSIDIAN_VAULT_PATH"
+}

@@ -1,4 +1,4 @@
 interface:
   display_name: "AI 对话记录写入"
-  short_description: "把重要 AI 对话、执行摘要、验证结论和风险确认写入 communications"
-  default_prompt: "Use $ai-communication-recorder to write structured conversation, execution, validation, operation status, and automation run records into the configured communications folder."
+  short_description: "把执行事实写入 communications，并避免混入长期规则"
+  default_prompt: "Use $ai-communication-recorder to write structured execution, validation, operation status, automation, and confirmation facts into communications without recording secrets or long-term rules."

@@ -8,7 +8,7 @@ description: 通用任务规则快速路由 skill。Use when Codex needs to quic
 ## Routing Flow
 
 1. Read the user request and identify the task class.
-2. Read the index or route file.
+2. Read the formal entry index, workflow runbook, or route file when available.
 3. Select the smallest relevant rule set.
 4. Read topic files only after the route is clear.
 5. Verify task-critical facts in source code, runtime behavior, artifacts, or repository config.
@@ -27,6 +27,10 @@ description: 通用任务规则快速路由 skill。Use when Codex needs to quic
 - Conversation record: communication recorder.
 - Extracted lessons: communication lessons extractor.
 - Skill generation or sync: skill sync workflow.
+- Knowledge source, folder responsibility, or path conflict: knowledge source rules.
+- AI workflow runbook, user-confirmation node, or minimal startup flow: index router plus workflow runbook.
+- Runtime skill install, generated skill output, or hash drift: skill sync workflow.
+- New-machine migration, restore, C-drive boundary, or health check: migration restore workflow.
 
 ## Guardrails
 
@@ -34,7 +38,8 @@ description: 通用任务规则快速路由 skill。Use when Codex needs to quic
 - Do not treat routing docs as final facts.
 - Do not create a project-specific skill from a route that only applies to one feature.
 - If two routes conflict, use the current source and runtime evidence to decide.
+- If a workflow says generated skills or runtime skills are not sources of truth, do not reverse-sync them into md.
 
 ## Output
 
-List selected route files, skipped irrelevant files, and the concrete evidence still needed.
+List selected route files, skipped irrelevant files, workflow confirmation points, and the concrete evidence still needed.

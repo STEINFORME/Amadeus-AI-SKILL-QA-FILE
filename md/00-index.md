@@ -10,18 +10,21 @@
 
 ## 读取顺序
 
-1. `01-path-and-source-rules.md`
-2. 按任务类型读取对应主题文件
-3. 回到源码、接口、截图、RP 或真实页面验证关键事实
-4. 修改或维护 skill 时再读取 `98-daily-skill-sync-rule.md`
-5. 需要记录对话时读取 `99-ai-communications-recording-rule.md`
-6. 需要从对话提炼可复用教训时读取 `12-communication-lessons-and-knowledge.md`
+1. `00-knowledge-source-policy.md`
+2. `00-agent-entry-index.md`
+3. 按任务类型读取对应主题文件
+4. 回到源码、接口、截图、RP 或真实页面验证关键事实
+5. 修改或维护 skill 时再读取 `98-daily-skill-sync-rule.md` 和 `00-runtime-sync-policy.md`
+6. 需要记录对话时读取 `99-ai-communications-recording-rule.md`
+7. 需要从对话提炼可复用教训时读取 `12-communication-lessons-and-knowledge.md`
 
 ## 任务路由
 
 | 任务类型 | 优先读取 | 目的 |
 | --- | --- | --- |
-| 路径、记录、知识源、skill 输出规则 | `01-path-and-source-rules.md` | 统一所有 AI 的写入位置和维护边界 |
+| AI 启动入口和最小读取 | `00-agent-entry-index.md` | 先路由，再按任务读取必要 md |
+| 路径、记录、知识源、skill 输出规则 | `00-knowledge-source-policy.md`、`00-folder-purpose-map.md`、`01-path-and-source-rules.md` | 统一所有 AI 的写入位置和维护边界 |
+| AI 工作流、迁移恢复、runtime 同步 | `00-ai-workflow-runbook.md`、`00-migration-and-restore-guide.md`、`00-runtime-sync-policy.md` | 区分正式源、生成产物、运行层和恢复脚本 |
 | 写 RP 页面、改 UI、判断前端实现 | `02-rp-page-development-rules.md` | 判断页面归属、证据等级、技术栈、字段和安全边界 |
 | 快速选择该读哪份规则 | `03-rp-page-common-router.md` | 作为简易入口和自动化索引 |
 | 改完验收、写测试结论 | `04-rp-page-testing-rules.md` | 按入口、参数、显隐、交互、视觉输出结论 |

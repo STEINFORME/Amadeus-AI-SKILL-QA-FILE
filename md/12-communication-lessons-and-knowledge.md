@@ -23,10 +23,10 @@
 
 ### 20260527-001 知识源分层固定
 
-- 来源：`communications\2026-05-27\161500-qa-migration.md`
+- 来源：`communications\2026-05-27\161500-qa-migration.md`、`communications\2026-06-09-ai-workflow-knowledge-refactor-report.md`
 - 类型：路径规则
-- 内容：原仓库 `qa` 只保留简版索引和自动化触发入口，完整长期知识写入 `D:\software\Amadeus-AI-SKILL-QA-FILE\md`，AI 对话和执行事实写入 `communications`，同步后的 skill 写入 `SKILL`。
-- 适用：读取 QA、更新规则、记录对话、同步 skill。
+- 内容：正式长期规则只写 `D:\software\Amadeus-AI-SKILL-QA-FILE\md`；`communications` 只记执行事实，`SKILL` 是 generated artifact，runtime skills 可重建，Hermes 只产出候选规则；原仓库 `qa` 只保留简版入口。
+- 适用：读取 QA、更新规则、记录对话、同步 skill、处理来源冲突。
 
 ### 20260527-002 对话提炼只写一个入口
 
@@ -69,3 +69,17 @@
 - 类型：自动化规则
 - 内容：提交和推送分开处理；未明确要求推送时不推送，自动化任务明确授权提交或推送时可直接执行；执行前仍要核对当前分支、远端目标和工作区状态；无真实差异时不为满足授权制造改动，执行后记录提交哈希、推送结果和未执行项。
 - 适用：自动化同步 skill、直接提交到 main、推送远端。
+
+### 20260609-008 迁移恢复不搬运运行态和敏感内容
+
+- 来源：`communications\2026-06-09-ai-workflow-knowledge-refactor-report.md`
+- 类型：风险提醒
+- 内容：迁移 AI 工作流时，D 盘长期资产可迁移；C 盘 sessions、log、cache、登录态、密钥、token、cookie、Git 凭证和本机 local profile 不作为迁移资产；公司 repo 重新 clone，runtime skills 从 `SKILL` 重建。
+- 适用：新电脑恢复、C 盘空间治理、Hermes Junction、Codex runtime skill 恢复。
+
+### 20260609-009 skill 占位模板不能作为有效产物
+
+- 来源：`communications\2026-06-09-ai-workflow-knowledge-refactor-report.md`
+- 类型：自动化规则
+- 内容：发现 generated skill 目录只含 TODO 模板时，不能当成有效 skill；应先回到正式 md 确认通用规则，再补全 `SKILL.md` 和 `agents/openai.yaml`，或经确认删除占位目录。
+- 适用：skill-creator 初始化失败、自动化中断、同步前校验、清理无效 skill 目录。
